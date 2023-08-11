@@ -10,6 +10,11 @@ app.get('/webhooks', (req, res) => {
     res.sendFile(file);
 });
 
+app.get('/', (req, res) => {
+    var file = path.join(__dirname, 'home.html');
+    res.sendFile(file);
+});
+
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`);
 });
