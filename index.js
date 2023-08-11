@@ -5,7 +5,7 @@ const path = require('path');
 
 app.use('/public', express.static(path.join(__dirname, '/public')));
 
-app.get('/', (req, res) => {
+app.get('/webhooks', (req, res) => {
     var file = path.join(__dirname, 'home.html');
     res.sendFile(file);
 });
